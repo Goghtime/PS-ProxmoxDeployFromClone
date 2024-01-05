@@ -13,7 +13,7 @@ param (
     $Token,
     $TokenName
 )
-Install-Module -Name Corsinvest.ProxmoxVE.Api
+Install-Module -Name Corsinvest.ProxmoxVE.Api -Force
 
 # Define the root path
 $rootPath = Split-Path -Path $PSScriptRoot -Parent
