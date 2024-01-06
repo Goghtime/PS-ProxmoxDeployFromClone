@@ -23,6 +23,7 @@ $headers = @{
 $body = @{
     "memory" = $memory
     "sockets" = $sockets
+    "ipconfig0" = $ipconfig0
 }
 
 # Check if net1 and ipconfig1 are not null or empty and add them to the body

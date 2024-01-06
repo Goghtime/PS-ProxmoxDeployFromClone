@@ -13,7 +13,18 @@ Import-module Corsinvest.ProxmoxVE.Api
 $data = Get-PveNodesQemuConfig -Vmid $VMID -node $Node
 
 
-if (($memory -eq ($data.Response.data.memory)) -and 
+if ($null -eq $ipconfig1){
+    if (($memory -eq ($data.Response.data.memory)) -and 
+    ($sockets -eq ($data.Response.data.sockets)) -and 
+    ($ipconfig0 -eq ($data.Response.data.ipconfig0))) {
+    Write-Output "Match"
+    exit 0
+} else {
+    Write-Output "No match"
+    exit 0
+}
+} else {
+    if (($memory -eq ($data.Response.data.memory)) -and 
     ($sockets -eq ($data.Response.data.sockets)) -and 
     ($null -ne ($data.Response.data.net1)) -and 
     ($ipconfig0 -eq ($data.Response.data.ipconfig0)) -and 
@@ -24,7 +35,7 @@ if (($memory -eq ($data.Response.data.memory)) -and
     Write-Output "No match"
     exit 0
 }
-
+}
 
 # If you reach here, it indicates an unexpected issue
 Write-Output "Unexpected error occurred"
