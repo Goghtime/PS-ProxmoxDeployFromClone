@@ -1,6 +1,6 @@
 # PS-ProxmoxDeployFromClone
 
- I couldn't figure out how to make the ansible module (community.general.proxmox module) idempotent when you make a hardware change. By the I mean, when you make a change to ipconfigN or netN it always reports as a change. Anyhow, I like using powershell so I made a VM deployment from clone. Nothing ground breaking...
+ I couldn't figure out how to make the ansible module (community.general.proxmox module) idempotent when you make a hardware change. By tat I mean, when you make a change to ipconfigN or netN it always reports as a change. Anyhow, I like using powershell so I made a VM deployment from clone. Nothing ground breaking...
 
 This was build with the intention of running it from ansible so you can pass all the variabled.
  ```powershell
