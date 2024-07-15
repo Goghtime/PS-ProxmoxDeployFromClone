@@ -1,0 +1,12 @@
+{
+    "NodeFQDN"  : "",
+    "Name"      : "",
+    "VMID"      : "",
+    "Node"      : "",
+    "memory"    : "",
+    "sockets"   : "",
+    "ipconfig0" : "",
+    "ipconfig1" : "",
+    "net1"      : "",
+    "password"  : ""
+}
